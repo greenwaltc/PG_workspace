@@ -74,7 +74,8 @@ def plot_time_window(df, t1, t2, col, title=None, figsize=(18,5), fontsize=14,
 
     fig, axs = plt.subplots(1, sharex=True, sharey=False, gridspec_kw={'hspace': 0}, figsize=figsize)
 
-    sns.lineplot(x=df.index, y=df[col], ax=axs)
+    sns.lineplot(x=df.index, y=df[col], ax=axs, fontsize=fontsize)
+    
     plt.rcParams.update({'font.size': fontsize})
     if title is not None:
         plt.title(title, fontsize=fontsize)
