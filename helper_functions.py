@@ -3,11 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-np.set_printoptions(suppress=True)
-
-data_directory = './data/Feb2022/' # The root directory for where all the data files are stored
-overall_filename = 'february_data.csv' # Filename where the concatenated individual files will be stored
-
 # Helper functions. They do what the function name suggests
 def read_in_file(filename, keep_columns=None, time_format='%Y-%m-%dT%H:%M:%S.%f'):
     '''Reads in a .csv file into a Pandas DataFrame. 
@@ -74,7 +69,7 @@ def plot_time_window(df, t1, t2, col, title=None, figsize=(18,5), fontsize=14,
 
     fig, axs = plt.subplots(1, sharex=True, sharey=False, gridspec_kw={'hspace': 0}, figsize=figsize)
 
-    sns.lineplot(x=df.index, y=df[col], ax=axs, fontsize=fontsize)
+    sns.lineplot(x=df.index, y=df[col], ax=axs)
     
     plt.rcParams.update({'font.size': fontsize})
     if title is not None:
