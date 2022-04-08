@@ -4,14 +4,14 @@
 
 ### Prerequisites
 A configured python environment with the following libraries installed:
-> pandas
-> numpy
-> zipfile
-> tqdm
-> matplotlib
-> seaborn
-> stumpy (this is the library for doing the matrix profile)
-> datetime
+> pandas, 
+> numpy, 
+> zipfile, 
+> tqdm, 
+> matplotlib, 
+> seaborn, 
+> stumpy (this is the library for doing the matrix profile), 
+> datetime, 
 > sklearn
 
 ### Step 1 - Getting the data ready
